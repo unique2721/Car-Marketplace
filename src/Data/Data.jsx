@@ -1,3 +1,4 @@
+import tesla from '../assets/tesla.png'
 const CarMakes=[
     
         {
@@ -84,6 +85,149 @@ const CarMakes=[
     
 ]
 
+const Cars = [
+  {
+    id: 1,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 2,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 3,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 4,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 5,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 6,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 7,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 8,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 9,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 10,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 11,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 12,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 13,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 14,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 15,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 16,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 17,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 18,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 19,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 20,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 21,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 22,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 23,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 24,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 25,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 26,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 27,
+    img: tesla,
+    name: 'tesla'
+  },
+  {
+    id: 28,
+    img: tesla,
+    name: 'tesla'
+  },
+]
+
 const Pricing=[
     {
         id:1,
@@ -156,5 +300,6 @@ const Category=[
 export default{
     CarMakes,
     Pricing,
-    Category
+    Category,
+    Cars
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Category from '../components/Category'
+import Cars from '../components/Cars'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header/>
       <Hero/>
       <Category/>
+      <Cars/>
     </div>
   )
 }
