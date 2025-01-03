@@ -102,7 +102,7 @@ const CarFilter = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-6 lg:px-8">
+    <div className=" mt-10 bg-gray-50 py-12 px-6 lg:px-8">
       <div className="max-w-screen-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold text-center mb-6">Car Search</h2>
 
