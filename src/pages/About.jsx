@@ -1,7 +1,7 @@
 // src/pages/AboutPage.jsx
 import React from 'react';
 import { FaCar, FaSearch, FaHandshake, FaUsers } from 'react-icons/fa';
-
+import user from '../assets/user.jpg'
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -61,17 +61,17 @@ const About = () => {
           <h2 className="text-3xl font-bold mb-12">Meet Our Team</h2>
           <div className="flex flex-wrap justify-center gap-12">
             <div className="team-member text-center">
-              <img src="https://example.com/team-member1.jpg" alt="Team Member 1" className="w-32 h-32 rounded-full mx-auto mb-4" />
+              <img src={user} alt="Team Member 1" className="w-32 h-32 rounded-full mx-auto mb-4" />
               <h3 className="font-semibold text-xl mb-2">John Doe</h3>
               <p className="text-gray-600">Founder & CEO</p>
             </div>
             <div className="team-member text-center">
-              <img src="https://example.com/team-member2.jpg" alt="Team Member 2" className="w-32 h-32 rounded-full mx-auto mb-4" />
+              <img src={user} alt="Team Member 2" className="w-32 h-32 rounded-full mx-auto mb-4" />
               <h3 className="font-semibold text-xl mb-2">Jane Smith</h3>
               <p className="text-gray-600">Chief Technology Officer</p>
             </div>
             <div className="team-member text-center">
-              <img src="https://example.com/team-member3.jpg" alt="Team Member 3" className="w-32 h-32 rounded-full mx-auto mb-4" />
+              <img src={user} alt="Team Member 3" className="w-32 h-32 rounded-full mx-auto mb-4" />
               <h3 className="font-semibold text-xl mb-2">Alex Brown</h3>
               <p className="text-gray-600">Marketing Lead</p>
             </div>
