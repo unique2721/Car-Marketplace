@@ -5,12 +5,26 @@ import {LuFuel} from 'react-icons/lu'
 import { RiSpeedUpLine } from "react-icons/ri";
 import { BsGearWideConnected } from "react-icons/bs";
 import { MdOpenInNew } from "react-icons/md";
+import { FaSearch } from 'react-icons/fa';
 
 
 const Cars = () => {
   return (
     <div >
       <h2 className=' font-bold text-3xl text-center my-16'>Most Searched Cars</h2>
+      
+      <div className="flex justify-center items-center space-x-2 mb-6">
+        <div className="relative w-full max-w-md">
+          <input
+            type="text"
+            className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Search cars..."
+          />
+          <FaSearch className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500" />
+        </div>
+      </div>
+
+
       <div className=' flex justify-between items-center flex-wrap gap-6 mx-24'>
 
       {
