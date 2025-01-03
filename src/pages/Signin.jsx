@@ -1,11 +1,19 @@
-// src/pages/AuthPage.jsx
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+
 const Signin = () => {
   const [isSignUp, setIsSignUp] = useState(false);
 
   // State to handle form inputs
   const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    password: '',
+  });
+
+  // State to handle validation errors
+  const [errors, setErrors] = useState({
     name: '',
     email: '',
     phone: '',
@@ -21,18 +29,61 @@ const Signin = () => {
     });
   };
 
+  // Validate input fields
+  const validate = () => {
+    let valid = true;
+    let newErrors = { name: '', email: '', phone: '', password: '' };
+
+    // Name validation for Sign Up
+    if (isSignUp && !formData.name.trim()) {
+      newErrors.name = 'Name is required';
+      valid = false;
+    }
+
+    // Email validation
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+      valid = false;
+    }
+
+    // Phone number validation for Sign Up
+    if (isSignUp && !/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = 'Phone number must be 10 digits';
+      valid = false;
+    }
+
+    // Password validation
+    if (!formData.password) {
+      newErrors.password = 'Password is required';
+      valid = false;
+    } else if (formData.password.length < 8) {
+      newErrors.password = 'Password must be at least 8 characters';
+      valid = false;
+    } else if (!/\d/.test(formData.password) || !/[!@#$%^&*(),.?":{}|<>]/.test(formData.password)) {
+      newErrors.password = 'Password must contain at least one number and one special character';
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
   // Toggle between Sign Up and Sign In
   const toggleForm = () => {
     setIsSignUp(!isSignUp);
+    setErrors({ name: '', email: '', phone: '', password: '' }); // Reset errors when switching forms
   };
 
-  // Submit form (you can later integrate your authentication logic here)
+  // Submit form
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (isSignUp) {
-      console.log('Sign Up data:', formData);
-    } else {
-      console.log('Sign In data:', formData);
+    if (validate()) {
+      if (isSignUp) {
+        console.log('Sign Up data:', formData);
+      } else {
+        console.log('Sign In data:', formData);
+      }
     }
   };
 
@@ -55,9 +106,9 @@ const Signin = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  required
-                  className="block w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className={`block w-full px-4 py-2 text-gray-900 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none`}
                 />
+                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
               </div>
             </div>
           )}
@@ -72,9 +123,9 @@ const Signin = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                required
-                className="block w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className={`block w-full px-4 py-2 text-gray-900 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none`}
               />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
           </div>
 
@@ -89,9 +140,9 @@ const Signin = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  required
-                  className="block w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className={`block w-full px-4 py-2 text-gray-900 border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none`}
                 />
+                {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
               </div>
             </div>
           )}
@@ -106,9 +157,9 @@ const Signin = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                required
-                className="block w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className={`block w-full px-4 py-2 text-gray-900 border ${errors.password ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none`}
               />
+              {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
             </div>
           </div>
 
@@ -116,7 +167,8 @@ const Signin = () => {
           <div>
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+              className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none transition duration-300"
+              disabled={Object.values(errors).some((error) => error)}
             >
               {isSignUp ? 'Sign Up' : 'Sign In'}
             </button>
