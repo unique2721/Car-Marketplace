@@ -6,6 +6,7 @@ import Category from '../components/Category'
 import Cars from '../components/Cars'
 import Navbar from '../components/Navbar'
 import Footer from './Footer'
+import CarFilter from '../components/CarFilter'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Navbar/>
       <Hero/>
       <Category/>
+      <CarFilter/>
       <Cars/>
       <Footer/>
     </div>
