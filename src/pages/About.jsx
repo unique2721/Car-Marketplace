@@ -1,10 +1,12 @@
 // src/pages/AboutPage.jsx
 import React from 'react';
 import { FaCar, FaSearch, FaHandshake, FaUsers } from 'react-icons/fa';
+import Navbar from '../components/Navbar';
 import user from '../assets/user.jpg'
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navbar/>
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] bg-cover bg-center" style={{ backgroundImage: "url('https://example.com/car-marketplace-hero.jpg')" }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>

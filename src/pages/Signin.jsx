@@ -1,7 +1,6 @@
 // src/pages/AuthPage.jsx
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaPhoneAlt, FaLock } from 'react-icons/fa';
-
+import Navbar from '../components/Navbar';
 const Signin = () => {
   const [isSignUp, setIsSignUp] = useState(false);
 
@@ -39,6 +38,7 @@ const Signin = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center items-center py-12 px-4 sm:px-6 lg:px-8">
+      <Navbar/>
       <div className="max-w-lg w-full bg-white p-8 border rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold text-center mb-6">{isSignUp ? 'Sign Up' : 'Sign In'}</h2>
 
