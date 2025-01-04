@@ -22,7 +22,7 @@ const Header = () => {
           <Link to={'/contact'} className=' hidden sm:inline text-slate-700 hover:underline'>Contact</Link>
           <Link to={'/signin'} className='sm:inline text-slate-700 hover:underline'>Signin</Link>
           <Link to={'/user'} className='sm:inline text-slate-700 hover:underline'>User</Link>
-          <Link to={'/carlisting'} className='sm:inline text-slate-700 hover:underline'>Submit lisitng</Link>
+          <Link to={'/carListing'} className='sm:inline text-slate-700 hover:underline'>Submit lisitng</Link>
         </ul>
       </div>
     </header>

@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { BrowserRouter,Routes,Router, Route } from 'react-router-dom'
 /* pages */
 import Home from './pages/Home'
-import Signin from './pages/Signin'
 import Signout from './pages/Signout'
 import About from './pages/About'
 import Profile from './pages/Profile'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
+import Signin from './pages/Signin'
+import CarListing from './components/CarListing'
 /* components */
 import Header from './components/Header'
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/signout' element={<Signout/>}/>
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/carListing' element={<CarListing/>}/>
       </Routes>
       </BrowserRouter>
     </>

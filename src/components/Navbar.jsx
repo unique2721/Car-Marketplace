@@ -11,6 +11,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+      <Navbar/>
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
@@ -37,7 +38,7 @@ const Navbar = () => {
           <Link to={'/contact'} className="hover:text-blue-600">Contact</Link>
           <Link to={'/signin'} className="hover:text-blue-600">Sign In</Link>
           <Link
-          to={'/submit-listing'}
+          to={'/carListing'}
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
           >
             Submit Listing
@@ -72,7 +73,7 @@ const Navbar = () => {
               Sign In
             </Link>
             <Link
-              to= {"/submit-listing"}
+              to= {"/carListing"}
               className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
             >
               Submit Listing
