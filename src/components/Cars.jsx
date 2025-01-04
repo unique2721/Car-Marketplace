@@ -16,7 +16,7 @@ const Cars = () => {
         <div className="relative w-full max-w-lg">
           <input
             type="text"
-            className="w-full px-6 py-3 bg-white border border-gray-300 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out"
+            className="w-full px-6 py-3 bg-white border border-gray-300 rounded-full shadow-lg focus:outline-none"
             placeholder="Search cars..."
           />
           <FaSearch className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500" />
