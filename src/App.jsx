@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { BrowserRouter,Routes,Router, Route } from 'react-router-dom'
 /* pages */
 import Home from './pages/Home'
-import Signout from './pages/Signout'
 import About from './pages/About'
 import Profile from './pages/Profile'
 import Services from './pages/Services'
@@ -23,7 +22,6 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/register' element={<Register/>}/>
-        <Route path='/signout' element={<Signout/>}/>
         <Route path='/profile' element={<Profile/>}/>
       </Routes>
       </BrowserRouter>
