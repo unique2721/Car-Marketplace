@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 
-const Signin = () => {
+const Register = () => {
   const [isSignUp, setIsSignUp] = useState(false);
 
   // State to handle form inputs
@@ -208,4 +208,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Register;

@@ -7,7 +7,7 @@ import About from './pages/About'
 import Profile from './pages/Profile'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
-import Signin from './pages/Signin'
+import Signin from './pages/Register'
 
 /* components */
 import Header from './components/Header'
