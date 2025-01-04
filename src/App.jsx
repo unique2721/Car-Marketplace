@@ -7,7 +7,7 @@ import About from './pages/About'
 import Profile from './pages/Profile'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
-import Signin from './pages/Register'
+import Register from './pages/Register'
 
 /* components */
 import Header from './components/Header'
@@ -22,7 +22,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
-        <Route path='/signin' element={<Signin/>}/>
+        <Route path='/register' element={<Register/>}/>
         <Route path='/signout' element={<Signout/>}/>
         <Route path='/profile' element={<Profile/>}/>
       </Routes>
