@@ -70,7 +70,7 @@ const Navbar = () => {
               Contact
             </Link>
             <Link to={"/signin"} className="text-gray-700 hover:text-blue-600">
-              Sign In
+              Register
             </Link>
             <Link
               to= {"/carListing"}
