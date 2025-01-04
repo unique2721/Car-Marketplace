@@ -34,6 +34,7 @@ const Navbar = () => {
           <Link to={'/'}  className="hover:text-blue-600">Home</Link>
           <Link to={'/about'} className="hover:text-blue-600">About</Link>
           <Link to={'/services'} className="hover:text-blue-600">Services</Link>
+          <Link to={'/contact'} className="hover:text-blue-600">Contact</Link>
           <Link to={'/signin'} className="hover:text-blue-600">Sign In</Link>
           <Link
           to={'/submit-listing'}
@@ -63,6 +64,9 @@ const Navbar = () => {
             </Link>
             <Link to= {"/services"} className="text-gray-700 hover:text-blue-600">
               Services
+            </Link>
+            <Link to= {"/contact"} className="text-gray-700 hover:text-blue-600">
+              Contact
             </Link>
             <Link to={"/signin"} className="text-gray-700 hover:text-blue-600">
               Sign In

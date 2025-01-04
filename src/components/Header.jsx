@@ -19,6 +19,7 @@ const Header = () => {
           <Link to={'/'} className=' hidden sm:inline text-slate-700 hover:underline'>Home</Link>
           <Link to={'/about'} className=' hidden sm:inline text-slate-700 hover:underline'>About</Link>
           <Link to={'/services'} className=' hidden sm:inline text-slate-700 hover:underline'>Services</Link>
+          <Link to={'/contact'} className=' hidden sm:inline text-slate-700 hover:underline'>Contact</Link>
           <Link to={'/signin'} className='sm:inline text-slate-700 hover:underline'>Signin</Link>
           <Link to={'/user'} className='sm:inline text-slate-700 hover:underline'>User</Link>
           <Link to={'/carlisting'} className='sm:inline text-slate-700 hover:underline'>Submit lisitng</Link>
