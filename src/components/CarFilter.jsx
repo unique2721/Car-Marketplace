@@ -223,6 +223,10 @@ const CarFilter = () => {
               <option value="30000,50000">$30,000 - $50,000</option>
             </select>
           </div>
+          <button class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 focus:outline-none">
+  Search
+</button>
+
         </div>
 
         {/* Car Results Section */}
