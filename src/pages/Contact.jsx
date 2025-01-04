@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,6 +52,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Navbar/>
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
         <h1 className="text-3xl font-semibold text-center text-gray-800 mb-8">Contact Us</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
